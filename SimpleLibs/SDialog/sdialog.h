@@ -27,10 +27,10 @@ public:
 
 public slots:
     void setBorderWidth(const int width);
-    void setBorderHidden(bool hide);
+    void setBordersHidden(bool hide);
     void setTitleBarHeight(const int height);
     int getBorderWidth() const;
-    QFrame *CentralFrame();
+    QWidget *clientWidget();
 
 protected:
     bool eventFilter(QObject *o, QEvent *e);
@@ -39,14 +39,14 @@ protected:
     void mouseReleaseEvent(QMouseEvent *e);
 
 private slots:
-    void on_toolButton_close_clicked();
-    void on_toolButton_resize_clicked();
-    void on_toolButton_minSize_clicked();
+    void on_toolButton_closeDialog_clicked();
+    void on_toolButton_maxRestoreDialog_clicked();
+    void on_toolButton_minSizeDialog_clicked();
 
 private:
     Ui::SDialog *ui;
     MousePressRegion mMousePressRegion;
-    bool mLBtnOnPressing;
+    bool mIsLBtnOnPressing;
     QPoint mLBtnPressPos;
 
 };

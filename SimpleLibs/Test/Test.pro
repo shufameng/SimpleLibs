@@ -14,14 +14,17 @@ TEMPLATE = app
 
 SOURCES += main.cpp\
         testdialog.cpp \
-    dialogdownloadfile.cpp
+    dialogdownloadfile.cpp \
+    widgettest.cpp
 
 HEADERS  += testdialog.h \
-    dialogdownloadfile.h
+    dialogdownloadfile.h \
+    widgettest.h
 
 FORMS += \
     frametest.ui \
-    dialogdownloadfile.ui
+    dialogdownloadfile.ui \
+    widgettest.ui
 
 win32:CONFIG(release, debug|release): LIBS += -L$$OUT_PWD/../SDialog/release/ -lSDialog
 else:win32:CONFIG(debug, debug|release): LIBS += -L$$OUT_PWD/../SDialog/debug/ -lSDialog
@@ -41,8 +44,6 @@ else:win32:CONFIG(debug, debug|release): LIBS += -L$$OUT_PWD/../SLogger/debug/ -
 INCLUDEPATH += $$PWD/../SLogger
 DEPENDPATH += $$PWD/../SLogger
 
-win32:CONFIG(release, debug|release): LIBS += -L$$OUT_PWD/../SHttp/release/ -lSHttp
-else:win32:CONFIG(debug, debug|release): LIBS += -L$$OUT_PWD/../SHttp/debug/ -lSHttp
+RESOURCES += \
+    qss.qrc
 
-INCLUDEPATH += $$PWD/../SHttp
-DEPENDPATH += $$PWD/../SHttp

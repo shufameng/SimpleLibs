@@ -6,7 +6,7 @@ DlgSUpdater::DlgSUpdater(QWidget *parent) :
     SDialog(parent),
     ui(new Ui::FrmSUpdater)
 {
-    ui->setupUi(CentralFrame());
+    //ui->setupUi(clientWidget());
 }
 
 DlgSUpdater::~DlgSUpdater()

@@ -2,7 +2,7 @@
 #define DIALOGDOWNLOADFILE_H
 
 #include <QDialog>
-#include "shttp.h"
+//#include "shttp.h"
 
 namespace Ui {
 class DialogDownloadFile;
@@ -23,7 +23,7 @@ private slots:
 
 private:
     Ui::DialogDownloadFile *ui;
-    SHttp mHttp;
+    //SHttp mHttp;
 };
 
 #endif // DIALOGDOWNLOADFILE_H

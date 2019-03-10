@@ -9,7 +9,7 @@
 #include "slogger.h"
 
 namespace Ui {
-class FrameTest;
+class WidgetTest;
 }
 
 class TestDialog : public SDialog
@@ -26,7 +26,7 @@ private slots:
     void onPushButtonSHttp();
 
 private:
-    Ui::FrameTest *ui;
+    Ui::WidgetTest *ui;
     SLogger *mLogger;
 };
 
